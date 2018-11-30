@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">B_HERRMANNFlorian_TPListePlanetes</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="montableau">
+    <item>Algorithmes</item>
+    <item>Sport</item>
+    <item>Farniente</item>
+    <item>Spoil</item>
+    <item>Vacances</item>
+    <item>Pascal</item>
+    <item>........</item>
+    </string-array>
+</resources>
