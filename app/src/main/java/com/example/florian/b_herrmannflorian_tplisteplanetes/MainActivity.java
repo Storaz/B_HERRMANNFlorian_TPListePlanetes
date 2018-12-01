@@ -6,9 +6,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -35,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
         AndroidAdapter adapter = new AndroidAdapter(this,R.layout.items,androidList);
         final ListView list = (ListView) findViewById(R.id.maliste);
         list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+                                 AndroidVersion selectedItem = (AndroidVersion) adapter.getItemAtPosition(position);
+                                 Log.v(" ListPersonnalisée ", " Element selectionné: " + selectedItem.getVersionName());
+
+                             }
+                         });
+
 
 
 
